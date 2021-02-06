@@ -49,10 +49,13 @@ export const Data = styled.div`
 
 export const Price = styled.p`
   width: 110px;
+  text-align: center;
+
 `;
 
 export const Volume = styled.p`
   width: 155px;
+  text-align: left;
 `;
 
 export const CoinPercRed = styled.p`
@@ -61,8 +64,12 @@ export const CoinPercRed = styled.p`
 
 export const CoinPercGreen = styled.p`
   color: green;
+  text-align: center;
+
 `;
 
 export const MarketCap = styled.p`
   width: 230px;
+  text-align: center;
+
 `;

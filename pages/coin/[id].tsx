@@ -71,7 +71,10 @@ const Coin = ({ coin }: CoinType) => {
           <Image src={coin.image.large} />
           <Name>{coin.name}</Name>
           <Ticker>{coin.symbol}</Ticker>
-          <Current>£{coin.market_data.current_price.gbp.toFixed(2)}</Current>
+          <Current>
+            £
+            {coin.market_data.current_price.gbp.toFixed(2)}
+          </Current>
         </CoinContainer>
       </CoinPage>
     </Layout>
