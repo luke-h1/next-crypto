@@ -15,7 +15,7 @@ export const CoinRow = styled.div`
   width: 1000px;
   padding: 0;
   &:hover {
-    background: #171718;
+    color: blue;
   }
 `;
 

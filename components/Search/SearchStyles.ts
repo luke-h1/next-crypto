@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CoinSearch = styled.div`
-  margin-bottom: 64px;
+  margin: 4rem 0 4rem 0;
   display: flex;
   align-items: center;
   width: 300px;
