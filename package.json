@@ -39,13 +39,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run format && npm run lint:fix"
     }
-  },
-  "lint-staged": {
-    "./*.{js, jsx,ts,tsx}": [
-      "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
-      "npm run lint:fix"
-    ]
   }
 }
