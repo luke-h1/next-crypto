@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { CoinType } from 'pages/coin/[id]';
 import {
   CoinContainer,
   CoinRow,
