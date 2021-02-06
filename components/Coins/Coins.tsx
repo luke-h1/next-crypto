@@ -52,7 +52,8 @@ const Coins = ({
                 {price.toFixed(2)}
               </Price>
               <Volume>
-                Vol:<br />
+                Vol:
+                <br />
                 {volume.toLocaleString()}
               </Volume>
               {priceChange < 0 ? (
