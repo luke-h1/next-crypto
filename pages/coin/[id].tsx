@@ -1,13 +1,34 @@
 /* eslint-disable camelcase */
+import styled from 'styled-components';
 import Layout from '../../components/Layout/Layout';
-import {
-  CoinPage,
-  CoinContainer,
-  Name,
-  Ticker,
-  Current,
-  Image,
-} from './CoinStyles';
+
+const CoinPage = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+`;
+
+const CoinContainer = styled.div``;
+
+const Name = styled.h1`
+  text-decoration: underline;
+  text-align: center;
+`;
+
+const Ticker = styled.p`
+  font-size: 30px;
+  text-align: center;
+`;
+
+const Current = styled.p`
+  margin-top: 1rem;
+  font-size: 30px;
+  text-align: center;
+`;
+
+const Image = styled.img``;
 
 export type CoinType = {
   coin: any;
@@ -39,7 +60,10 @@ const Coin = ({ coin }: CoinType) => {
           <Image src={coin.image.large} />
           <Name>{coin.name}</Name>
           <Ticker>{coin.symbol}</Ticker>
-          <Current>£{coin.market_data.current_price.gbp.toFixed(2)}</Current>
+          <Current>
+            £
+            {coin.market_data.current_price.gbp.toFixed(2)}
+          </Current>
         </CoinContainer>
       </CoinPage>
     </Layout>
