@@ -13,11 +13,11 @@ export type CoinType = {
   coin: any;
   base: string;
   target: string;
-  market: [Object],
+  market: [Object];
   last: number;
   volume: number;
-  converted_last: [Object],
-  converted_volume: [Object],
+  converted_last: [Object];
+  converted_volume: [Object];
   trust_score: string;
   bid_ask_spread_percentage: number;
   timestamp: string;
@@ -29,7 +29,7 @@ export type CoinType = {
   token_info_url: string;
   coin_id: string;
   target_coin_id: string;
-}
+};
 
 const Coin = ({ coin }: CoinType) => {
   return (
@@ -39,10 +39,7 @@ const Coin = ({ coin }: CoinType) => {
           <Image src={coin.image.large} />
           <Name>{coin.name}</Name>
           <Ticker>{coin.symbol}</Ticker>
-          <Current>
-            £
-            {coin.market_data.current_price.gbp.toFixed(2)}
-          </Current>
+          <Current>£{coin.market_data.current_price.gbp.toFixed(2)}</Current>
         </CoinContainer>
       </CoinPage>
     </Layout>
