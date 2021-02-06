@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 import styled from 'styled-components';
+import { NextSeo } from 'next-seo';
 import Layout from '../../components/Layout/Layout';
 
 const CoinPage = styled.div`
@@ -25,6 +26,7 @@ const Ticker = styled.p`
 const Current = styled.p`
   margin-top: 1rem;
   font-size: 30px;
+  
   text-align: center;
 `;
 
@@ -55,6 +57,14 @@ export type CoinType = {
 const Coin = ({ coin }: CoinType) => {
   return (
     <Layout>
+      <NextSeo
+        title={`Next Crypto | ${coin.name}`}
+        canonical="https://lhowsam.com/projects"
+        openGraph={{
+          url: `https://next-crypto.vercel.app/coin/${coin.name}`,
+          title: `Next Crypto | ${coin.name}`,
+        }}
+      />
       <CoinPage>
         <CoinContainer>
           <Image src={coin.image.large} />
