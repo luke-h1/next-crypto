@@ -39,7 +39,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format && npm run lint:fix"
+      "pre-commit": "npm run lint:fix && npm run format"
     }
   }
 }
