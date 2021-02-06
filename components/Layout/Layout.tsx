@@ -21,8 +21,9 @@ const Main = styled.div`
 `;
 
 const Crypto = styled(FaBitcoin)`
-font-size: 60px;
-margin: 1rem 0 1rem 0;
+  font-size: 60px;
+  margin: 1rem 0 1rem 0;
+  cursor: pointer;
 `;
 
 const Layout = ({ children }) => {
@@ -30,7 +31,9 @@ const Layout = ({ children }) => {
     <Wrapper>
       <GlobalStyle />
       <Header>
-        <Link href="/"><Crypto /></Link>
+        <Link href="/">
+          <Crypto />
+        </Link>
       </Header>
       <Main>{children}</Main>
     </Wrapper>

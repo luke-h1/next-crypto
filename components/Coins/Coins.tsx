@@ -36,24 +36,14 @@ const Coins = ({
             </CoinWrap>
             <Data>
               <Price>{price}</Price>
-              <Volume>
-                £
-                {volume.toLocaleString()}
-              </Volume>
+              <Volume>£{volume.toLocaleString()}</Volume>
               {priceChange < 0 ? (
-                <CoinPercRed>
-                  {priceChange.toFixed(2)}
-                  %
-                </CoinPercRed>
+                <CoinPercRed>{priceChange.toFixed(2)}%</CoinPercRed>
               ) : (
-                <CoinPercGreen>
-                  {priceChange.toFixed(2)}
-                  %
-                </CoinPercGreen>
+                <CoinPercGreen>{priceChange.toFixed(2)}%</CoinPercGreen>
               )}
               <MarketCap>
-                Market Cap: £
-                {marketCap ? marketCap.toLocaleString() : ''}
+                Market Cap: £{marketCap ? marketCap.toLocaleString() : ''}
               </MarketCap>
             </Data>
           </CoinRow>
