@@ -35,6 +35,7 @@ const Image = styled.img``;
 export type CoinType = {
   coin: any;
   base: string;
+  name: string;
   target: string;
   market: [Object];
   last: number;

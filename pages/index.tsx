@@ -3,11 +3,13 @@ import { NextSeo } from 'next-seo';
 import CoinList from '../components/CoinList/CoinList';
 import Search from '../components/Search/Search';
 import Layout from '../components/Layout/Layout';
+import { CoinType } from './coin/[id]';
 
 export default function Home({ data }) {
   const [search, setSearch] = useState('');
 
-  const filterCoins = data.filter((coin) => coin.name.toLowerCase().includes(search.toLowerCase()));
+  // eslint-disable-next-line max-len
+  const filterCoins = data.filter((coin: CoinType) => coin.name.toLowerCase().includes(search.toLowerCase()));
 
   const handleChange = (e) => {
     e.preventDefault();
