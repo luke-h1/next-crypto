@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import Link from 'next/link';
 import {
   CoinContainer,
@@ -23,6 +24,11 @@ export type Coin = {
   image: any;
   priceChange: number;
   id: number;
+  current_price: number;
+  market_cap: number;
+  total_volume: number;
+  price_change_percentage_24h: number;
+
 };
 
 const Coins = ({

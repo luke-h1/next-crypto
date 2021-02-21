@@ -26,7 +26,7 @@ const Crypto = styled(FaBitcoin)`
   cursor: pointer;
 `;
 
-const Layout = ({ children }) => {
+const Layout: React.FC = ({ children }: React.ReactNode) => {
   return (
     <Wrapper>
       <GlobalStyle />
